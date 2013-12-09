@@ -203,6 +203,7 @@
 		</repository>
 	</repositories>
 	<build>
+	<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -279,5 +280,6 @@
 				<version>2.0</version>
 			</plugin>	
 		</plugins>
+		</pluginManagement>
 	</build>
 </project>
