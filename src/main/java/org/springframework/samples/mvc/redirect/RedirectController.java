@@ -1,9 +1,13 @@
 package org.springframework.samples.mvc.redirect;
 
+import java.util.Date;
+
 import javax.inject.Inject;
 
 import org.joda.time.LocalDate;
 import org.springframework.core.convert.ConversionService;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,7 +44,7 @@ public class RedirectController {
 	}
 
 	@RequestMapping(value="/{account}", method=RequestMethod.GET)
-	public String show(@PathVariable String account, @RequestParam(required=false) LocalDate date) {
+	public String show(@PathVariable String account,  @DateTimeFormat(iso=ISO.DATE) @RequestParam(required=false) Date date) {
 		return "redirect/redirectResults";
 	}
 
