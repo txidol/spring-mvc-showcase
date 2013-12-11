@@ -43,7 +43,7 @@ public class ConvertController {
 
 	@RequestMapping("value")
 	public @ResponseBody String valueObject(@RequestParam SocialSecurityNumber value) {
-		return "Converted value object " + value.getValue();
+		return "Converted value object " + value;
 	}
 
 	@RequestMapping("custom")
